@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olá Fatos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #0a0369;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            flex-wrap: wrap;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+        }
+
+        .header-left img {
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .header-left h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .search-bar {
+            margin-left: auto;
+            margin-right: 20px;
+        }
+
+        .search-bar input[type="text"] {
+            padding: 5px;
+            font-size: 14px;
+            width: 150px;
+        }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .menu-toggle div {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            margin: 5px 0;
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+        }
+
+        .header-right a {
+            background-color: #047f15;
+            color: #ffffff;
+            padding: 10px 20px;
+            margin-left: 10px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .header-right a:hover {
+            background-color: #0a7039;
+        }
+
+        nav {
+            background-color: #ffffff;
+            width: 100%;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-around;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            color: #000000;
+            text-decoration: none;
+            padding: 10px;
+            display: inline-block;
+        }
+
+        nav ul li a:hover {
+            background-color: #0de029;
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: flex;
+            }
+
+            nav ul {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+            }
+
+            nav ul li {
+                text-align: center;
+            }
+
+            nav ul.show {
+                display: flex;
+            }
+
+            .header-right {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .header-right a {
+                margin: 5px 0;
+            }
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            border-bottom: 2px solid #033660;
+            padding-bottom: 5px;
+        }
+
+        article {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-color:  #0a0369;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: static;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <img src="https://lh3.googleusercontent.com/a/ACg8ocJ8pj7ZJnfZ0fD_LM-QCTtAusPxVw7TAb0XBLAbe0qB82yKtcxWomeO_Lhh12qZrMHxw5Ir7zWq187xXY18lTZRgLaEclKF=s288-c-no " alt="download">
+            <h1>Olá Fatos</h1>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Pesquisar...">
+        </div>
+        <div class="header-right">
+            <a href="#inscrever-se">Inscrever-se</a>
+        </div>
+        <div class="menu-toggle" id="menu-toggle">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </header>
+    <nav>
+        <ul id="nav-list">
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#noticias">Notícias</a></li>
+            <li><a href="#esportes">Esportes</a></li>
+            <li><a href="#politica">Política</a></li>
+            <li><a href="#entretenimento">Entretenimento</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="inicio">
+            <h2>Início</h2>
+            <p>Bem-vindo ao Olá Fatos. Aqui você encontra as últimas notícias, esportes, política e entretenimento.</p>
+        </section>
+        <section id="noticias">
+            <h2>Notícias</h2>
+            <article>
+                <h3>Título da Notícia 1</h3>
+                <p>Conteúdo da notícia 1...</p>
+            </article>
+            <article>
+                <h3>Título da Notícia 2</h3>
+                <p>Conteúdo da notícia 2...</p>
+            </article>
+        </section>
+        <section id="esportes">
+            <h2>Esportes</h2>
+            <article>
+                <h3>Título de Esporte 1</h3>
+                <p>Conteúdo do esporte 1...</p>
+            </article>
+        </section>
+        <section id="politica">
+            <h2>Política</h2>
+            <article>
+                <h3>Título da Política 1</h3>
+                <p>Conteúdo da política 1...</p>
+            </article>
+        </section>
+        <section id="entretenimento">
+            <h2>Entretenimento</h2>
+            <article>
+                <h3>Título de Entretenimento 1</h3>
+                <p>Conteúdo de entretenimento 1...</p>
+            </article>
+        </section>
+        <section id="sobre">
+            <h2>Sobre</h2>
+            <p>Site sobre política, esporte e entretenimento. Fique por dentro dos assuntos atuais.</p>
+        </section>
+        <section id="contato">
+            <h2>Contato</h2>
+            <p>Informações de contato do Olá Fatos.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 olá fatos. Todos os direitos reservados.</p>
+    </footer>
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const navList = document.getElementById('nav-list');
+            navList.classList.toggle('show');
+        });
+    </script>
+</body>
+</html>
